@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+ 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+ 
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+ 
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+ 
+.logout-btn:hover {
+    background: #c0392b;
+}
+ 
+.main-content {
+    padding: 40px 30px;
+    text-align: center;
+}
+ 
+.input-group {
+    margin-bottom: 30px;
+}
+ 
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+ 
+.rfid-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    font-size: 1.2rem;
+    border: 3px solid #bdc3c7;
+    border-radius: 10px;
+    text-align: center;
+    background: #ecf0f1;
+    transition: all 0.3s ease;
+}
+ 
+.rfid-input:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+.status {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+ 
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+ 
+.success {
+    background: #d5f4e6;
+    color: #27ae60;
+    border: 2px solid #2ecc71;
+}
+ 
+.failure {
+    background: #fadbd8;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+ 
+.loading {
+    background: #fef9e7;
+    color: #f39c12;
+    border: 2px solid #f1c40f;
+}
+ 
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+ 
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+ 
+.stat-label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ 
+.instructions {
+    background: #f8f9fa;
+    padding: 30px;
+    border-top: 1px solid #dee2e6;
+}
+ 
+.instructions h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+ 
+.instructions ul {
+    list-style: none;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+ 
+.instructions li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+    color: #5a6c7d;
+}
+ 
+.instructions li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+}

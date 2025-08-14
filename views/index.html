@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Student Check-in</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Student Check-in System</h1>
+            <div class="user-info">
+                <span id="userInfo">Loading user info...</span>
+                <a href="/auth/logout" class="logout-btn">Logout</a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <form id="rfidForm">
+                <div class="input-group">
+                    <label for="rfidInput">Tap your student ID card:</label>
+                    <input 
+                        type="text" 
+                        id="rfidInput" 
+                        class="rfid-input" 
+                        placeholder="Waiting for card scan..."
+                        autofocus
+                        autocomplete="off"
+                    >
+                </div>
+            </form>
+            
+            <div id="status" class="status"></div>
+            
+            <div class="stats" id="stats">
+                <div class="stat">
+                    <span class="stat-number" id="successCount">0</span>
+                    <span class="stat-label">Successful</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="failureCount">0</span>
+                    <span class="stat-label">Failed</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Simply tap your student ID card on the RFID reader</li>
+                <li>The system will automatically process your check-in</li>
+                <li>Wait for the confirmation message before removing your card</li>
+            </ul>
+        </div>
+    </div>
+ 
+    <script src="/script.js"></script>
+</body>
+</html>
